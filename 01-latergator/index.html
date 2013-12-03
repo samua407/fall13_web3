@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Q.News </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="lib/script.js"></script>
+<link rel="stylesheet" href="style/style.css" type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Istok+Web|Quicksand|PT+Sans+Caption|Varela' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+
+<div id="header">
+
+<div id="showToggle" class="toggle" onclick="showHeader()">&#9669;</div>
+<div id="hideToggle" class="toggle" onclick="hideHeader()">&#9659;</div>
+
+
+<p id="checkin"> Hey, Alex! What do you want to know more about?</p>
+	<ul id="checkin" class="0">
+		<li id="type_0" class="hidden">Restaurant</li>
+		<li id="city_0" class="hidden">Brooklyn</li>
+		<li onClick="getCheckin(0)">Achille's Heel</li>
+	</ul>
+	
+	<ul id="checkin" class="1">
+		<li id="type_1" class="hidden">Gym</li>
+		<li id="city_1" class="hidden">New York City</li>
+		<li onClick="getCheckin(1)">Equinox Gym</li>
+	</ul>
+	
+	<ul id="checkin" class="2">
+		<li id="type_2" class="hidden">Music</li>
+		<li id="city_2" class="hidden">Brooklyn</li>
+		<li onClick="getCheckin(2)">Music Hall Of Williamsburg</li>
+	</ul>
+	
+	<ul id="checkin" class="3">
+		<li id="type_3" class="hidden">Outdoors</li>
+		<li id="city_3" class="hidden">Old Bridge</li>
+		<li onClick="getCheckin(3)">Long Live Paintball</li>
+	</ul>
+	
+	<ul id="checkin" class="4">
+		<li id="type_4" class="hidden">BBQ</li>
+		<li id="city_4" class="hidden">Austin</li>
+		<li onClick="getCheckin(4)">The Salt Lick</li>
+	</ul>
+
+</div>
+
+<div id="news">
+	<!-- 	The news populated will go here. -->
+</div>
+
+</body>

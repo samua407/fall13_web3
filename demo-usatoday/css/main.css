@@ -1,0 +1,34 @@
+
+
+section { margin:2em 20px 4em; }
+
+li { 
+    margin-bottom:2px; 
+    display:block;
+}
+    
+span { 
+    display:block;
+    margin:0 10px;
+    padding:0 5px;
+    height:1em;
+    background:#afe;
+}
+    span:hover { 
+        cursor:pointer; 
+        }
+    
+    span.active {
+        background:#f0f;
+    }
+
+
+.template {
+	display:none;
+}
+
+.story {
+	border: 1px solid;
+	padding: 10px;
+	margin: 10px;
+}

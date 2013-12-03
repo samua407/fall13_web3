@@ -1,0 +1,48 @@
+[15-Oct-2013 16:43:43] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 11
+[15-Oct-2013 16:43:50] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 11
+[15-Oct-2013 16:44:23] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 11
+[15-Oct-2013 16:48:14] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 9
+[15-Oct-2013 16:48:17] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 9
+[15-Oct-2013 16:49:36] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 15
+[15-Oct-2013 16:49:55] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 15
+[15-Oct-2013 16:52:44] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 15
+[15-Oct-2013 16:52:46] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 15
+[15-Oct-2013 16:52:52] PHP Parse error:  syntax error, unexpected ';' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 15
+[15-Oct-2013 17:05:21] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 71 bytes) in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 54
+[15-Oct-2013 17:05:37] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 71 bytes) in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 54
+[15-Oct-2013 17:06:41] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 53
+[15-Oct-2013 17:06:50] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 53
+[15-Oct-2013 17:07:03] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 53
+[15-Oct-2013 17:10:08] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 51
+[15-Oct-2013 17:14:19] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 53
+[15-Oct-2013 17:14:38] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 53
+[15-Oct-2013 17:14:48] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 57
+[15-Oct-2013 17:14:50] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 57
+[15-Oct-2013 17:14:57] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 57
+[15-Oct-2013 17:15:09] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 57
+[15-Oct-2013 17:15:13] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 57
+[15-Oct-2013 17:17:30] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 65
+[15-Oct-2013 17:19:34] PHP Parse error:  syntax error, unexpected '=' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 54
+[15-Oct-2013 17:19:36] PHP Parse error:  syntax error, unexpected '=' in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 54
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:23:15] PHP Warning:  Illegal offset type in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 50
+[15-Oct-2013 17:25:16] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 55
+[15-Oct-2013 17:25:29] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 53
+[15-Oct-2013 17:25:44] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home3/helloim3/public_html/web3/project02/timesQuery.php on line 54
+[15-Oct-2013 18:56:18] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:56:30] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:56:40] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:57:24] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:57:25] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:57:29] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:57:31] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:57:59] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:58:00] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33
+[15-Oct-2013 18:58:01] PHP Parse error:  syntax error, unexpected '}' in /home3/helloim3/public_html/web3/project02/timesPop.php on line 33

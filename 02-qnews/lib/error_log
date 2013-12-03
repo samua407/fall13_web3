@@ -1,0 +1,4 @@
+[17-Oct-2013 12:14:25] PHP Parse error:  syntax error, unexpected '<' in /home3/helloim3/public_html/web3/project02/lib/timesPop.php on line 41
+[17-Oct-2013 12:14:36] PHP Parse error:  syntax error, unexpected '<' in /home3/helloim3/public_html/web3/project02/lib/timesPop.php on line 41
+[17-Oct-2013 12:27:42] PHP Parse error:  syntax error, unexpected '<' in /home3/helloim3/public_html/web3/project02/lib/timesPop.php on line 42
+[18-Oct-2013 09:05:28] PHP Warning:  file_get_contents(http://digg.com/) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: Connection timed out in /home3/helloim3/public_html/web3/project02/lib/diggFrontPage.php on line 13

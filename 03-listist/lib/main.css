@@ -1,0 +1,35 @@
+
+
+
+
+.select {
+
+	height: 20px;
+	width: 100px;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	color: navy;
+	text-align: center;
+	border: 1px solid navy;
+	
+}
+
+.select-active {
+	
+	height: 20px;
+	width: 100px;
+	margin: 5px;
+	padding: 5px;
+	background-color: navy;
+	color: white;
+	text-align: center;
+	border: 1px solid navy;
+
+	
+}
+
+.recipe {
+	
+	display: none;
+}
