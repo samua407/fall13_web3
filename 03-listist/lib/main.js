@@ -1,4 +1,4 @@
-
+var email = 'samuel.ae@gmail.com';
 
 var chooser = {
 	gfCheck: '',
@@ -112,13 +112,108 @@ var chooser = {
 		}
 		
 	    chooser.listen();
+	    view.listen();
 	}
+	
+
 };
+
+
+var view = {
+	
+	listen: function(){
+
+		$('ul.recipe h1').click(function(e){
+			$('ul.recipe h1').unbind('click');
+			$('ul.recipefull').removeClass('recipefull').addClass('recipe');
+			$(e.target.parentElement).removeClass('recipe').addClass('recipefull');
+			view.listen();
+			view.listen_shrink();
+			shop.listen();
+		});
+		
+	},
+	
+	listen_shrink: function(){
+		
+		$('ul.recipefull h1').click(function(e){
+		
+			$('ul.recipefull').removeClass('recipefull').addClass('recipe');
+			
+		});
+	}
+	
+};
+
+
+var shop = {
+
+	list: new Array(),
+	
+	listen: function(){
+				
+		$('ul.recipefull li').click(function(e){
+			$('ul.recipefull li').unbind('click');
+			$(e.target).addClass('shop');
+			
+			var submit = e.target.parentElement;//.childNodes;
+			submit = $(submit).find('.submit')[0];
+			$(submit).fadeIn();
+
+			
+			var val = $(e.target)[0].textContent;
+			shop.list.push(val);
+			
+			shop.listen_cancel();
+						
+			shop.button(e);
+			
+		});
+	},
+
+	listen_cancel: function(){
+		
+		shop.listen();
+
+		$('li.shop').click(function(e){
+		
+			$(e.target).removeClass('shop');
+			
+			var val = $(e.target)[0].textContent;   
+			 
+			shop.list = $.grep(shop.list, function(value) {
+			  return value != val;
+
+			});
+			
+			shop.button(e);
+
+		});
+		
+	},
+	
+	button: function(e){
+		if(shop.list.length === 0 ){
+			var submit = e.target.parentElement;//.childNodes;
+			submit = $(submit).find('.submit')[0];
+			$(submit).fadeOut();
+		}
+		
+	},
+	
+	send: function(){
+	
+		
+	},
+	
+
+};
+
 
   
 $( document ).ready(function() {
 
-	chooser.listen();
+	chooser.listen();	
   
   
 });

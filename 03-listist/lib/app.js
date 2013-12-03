@@ -9,7 +9,7 @@ var db = {
 	notes_format: 'format=JSON&',
 	
 	//get recipes
-	get: function(shortid){
+	get: function(){
 
 		var sql_statement = "q=SELECT * FROM recipes";
 	    var url_query = this.url_cartoData + this.notes_format + sql_statement;
@@ -220,7 +220,7 @@ var build = {
 			if(isveg === 'true'){classname = classname + ' veg'};
 			
 			var thisrecipe = document.createElement("ul");
-			$(thisrecipe).attr('class', classname).attr('name', recipename).append('<h1>' + recipename + '</h1>').append(ingreds_li).append('<h3>See it <a href="'+url+'" target="_blank">here</a></h3>');
+			$(thisrecipe).attr('class', classname).attr('name', recipename).append('<h1>' + recipename + '</h1>').append(ingreds_li).append('<h3>See it <a href="'+url+'" target="_blank">here</a></h3><div class="submit">send</div>');
 	
 			$('div#recipes').append(thisrecipe);
 		

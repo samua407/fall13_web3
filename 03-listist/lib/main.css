@@ -1,6 +1,14 @@
 
 
 
+.submit{
+	
+	text-align: center;
+	width: 50px;
+	border: 1px solid red; 
+	display: none;
+	
+}
 
 .select {
 
@@ -32,4 +40,24 @@
 .recipe {
 	
 	display: none;
+	
 }
+
+.recipe li {
+	
+	display: none;
+	
+}
+
+.recipe h3 {
+	display: none;
+	
+}
+
+
+
+
+.shop {
+	color: red;
+}
+
