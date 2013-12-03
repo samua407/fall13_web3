@@ -36,5 +36,6 @@
 <div id='recipes'>
 </div>
 
+<iframe name='loader'></iframe>
 
 </body>

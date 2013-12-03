@@ -193,6 +193,13 @@ var shop = {
 	},
 	
 	button: function(e){
+	
+	
+		$( 'div.submit' ).click(function(e){
+			$(this).unbind('click');
+			shop.send(e);
+		});
+		
 		if(shop.list.length === 0 ){
 			var submit = e.target.parentElement;//.childNodes;
 			submit = $(submit).find('.submit')[0];
@@ -201,8 +208,35 @@ var shop = {
 		
 	},
 	
-	send: function(){
-	
+	send: function(e){
+			
+		  	
+			
+			var info = e.target.parentElement;
+			var name = $(info).find('h1')[0].innerText; //.find('name');
+			var ingreds = shop.list;
+			var url = $(info).find('h3');
+			url = $(url)[0];
+			url = $(url).find('a')[0].href;
+			
+
+			var num = ingreds.length;
+			var ingredString = '';
+
+			for(i = 0; i<num; i++){
+			
+				ingredString = ingredString + ingreds[i]+ '<br>' ;
+			
+			}
+			
+			
+			var link = 'lib/mail.php?email='+email+'&ingreds='+ingredString+'&name='+name+'&url='+url;
+		
+		   	console.log(link);
+			   	
+		   	//window.open(link,"loader");
+			  	
+		  	 
 		
 	},
 	
