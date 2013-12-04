@@ -1,0 +1,150 @@
+
+@font-face {
+font-family: BebasNeue;
+src: url("fonts/BebasNeue.otf") format("opentype");
+}
+
+
+body {
+	background: url("img/background.png") 0 0 no-repeat fixed;
+	
+}
+
+#type {
+	height:  70%;
+	width:  100%;
+
+}
+
+.type {
+   background: url("img/background.png") 0 0 no-repeat fixed;
+   height: 135px;
+   font: 75px BebasNeue;
+   color: #ddddde;
+   
+}
+
+.type h2 {
+	font-size: 90px;
+	padding-top: 17px;
+	padding-left: 30px;
+	letter-spacing: 5px;
+	
+}
+
+.type p {
+	font: 75px BebasNeue;
+	margin-top: -173px;
+	margin-left: 230px;
+}
+
+
+.select {
+	background-color: rgba(255,255,255,0.2);
+	margin: 18px;
+	width:  90%;
+	margin-right: auto;
+	margin-left:  auto;
+	text-align: center;
+	cursor: pointer;
+	
+	font: 75px BebasNeue;
+	color: #ddddde;
+
+}
+
+.select-active {
+
+	background-color: rgba(255,255,255,0.2);
+	margin: 6px;
+	width:  90%;
+	margin-right: auto;
+	margin-left:  auto;
+	text-align: center;
+	cursor: pointer;
+	
+	font: 75px BebasNeue;
+	color: #63c7c9;
+	
+}
+
+iframe {
+	
+	display:  none;
+}
+
+
+h1 {
+	font-family: "BebasNeue";
+}
+
+
+
+
+ul.recipe {
+
+	background-color: rgba(255,255,255,0.2);
+	margin: 18px;
+	width:  90%;
+	margin-right: auto;
+	margin-left:  auto;
+	text-align: center;
+	cursor: pointer;
+
+	list-style: none;
+	
+	font: 75px BebasNeue;
+	color: #ddddde;
+	
+	display: none;
+	
+}
+
+ul.recipe h1 {
+	font: 90px BebasNeue;
+
+}
+.recipe li {
+
+	display: none;
+}
+
+.recipe .seeurl {
+	display: none;	
+}
+
+.recipe .submit {
+	display: none;	
+}
+
+ul.recipefull {
+
+	background-color: rgba(255,255,255,0.2);
+	margin: 18px;
+	width:  90%;
+	margin-right: auto;
+	margin-left:  auto;
+	text-align: center;
+	cursor: pointer;
+
+	list-style: none;
+	
+	font: 75px BebasNeue;
+	color: #ddddde;
+		
+}
+
+ul.recipefull h1 {
+	font: 90px BebasNeue;
+
+}
+
+ul.recipefull .submit {
+	color: #63c7c9;
+	display: none;
+}
+
+ul.recipefull .shop {
+	color: #63c7c9;
+
+}
