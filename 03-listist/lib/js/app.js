@@ -220,7 +220,7 @@ var build = {
 			if(isveg === 'true'){classname = classname + ' veg'};
 			
 			var thisrecipe = document.createElement("ul");
-			$(thisrecipe).attr('class', classname).attr('name', recipename).append('<h1>' + recipename + '</h1>').append(ingreds_li).append('<div class="seeurl">See it <a href="'+url+'" target="_blank">here</a></div><div class="submit">send</div>');
+			$(thisrecipe).attr('class', classname).attr('name', recipename).append('<h1>' + recipename + '</h1>').append(ingreds_li).append('<div class="seeurl"><a href="'+url+'" target="_blank">see recipe</a></div><div class="submit">send list</div>');
 	
 			$('div#recipes').append(thisrecipe);
 		

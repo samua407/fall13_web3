@@ -1,43 +1,86 @@
 
 @font-face {
-font-family: BebasNeue;
-src: url("fonts/BebasNeue.otf") format("opentype");
+	font-family: BebasNeue;
+	src: url("fonts/BebasNeue.otf") format("opentype");
+}
+
+@font-face {
+	font-family: A-Rounded;
+	src: url("fonts/ArialRounded.ttf") format("truetype");
 }
 
 
 body {
-	background: url("img/background.png") 0 0 no-repeat fixed;
+	background: url("img/background.png") 0 0 repeat-y scroll;
 	
 }
 
-#type {
-	height:  70%;
-	width:  100%;
 
+/*----type header-----*/
+#type {
+	width:  100%;
 }
 
 .type {
    background: url("img/background.png") 0 0 no-repeat fixed;
    height: 135px;
-   font: 75px BebasNeue;
-   color: #ddddde;
+   width: 100%;
+   white-space: nowrap;
    
+   margin-top: 50px;
+   font: 65px BebasNeue;
+   color: #ddddde; 
+
+   overflow: hidden;
+   overflow-x: scroll;
+	
+	
 }
 
 .type h2 {
-	font-size: 90px;
-	padding-top: 17px;
+	font: 90px BebasNeue;
+	margin-top: 20px;
 	padding-left: 30px;
 	letter-spacing: 5px;
 	
 }
 
 .type p {
-	font: 75px BebasNeue;
-	margin-top: -173px;
-	margin-left: 230px;
+	font: 65px BebasNeue;
+	letter-spacing: 5px;
+	margin-top: -165px;
+	margin-left: 225px;
 }
 
+.typeUp {
+   background: url("img/background.png") 0 0 no-repeat fixed;
+   height: 135px;
+   width: 100%;
+   white-space: nowrap;
+   
+   margin-top: 50px;
+   font: 65px BebasNeue;
+   color: #ddddde; 
+
+   overflow: hidden;
+   overflow-x: scroll;
+   
+}
+
+.typeUp h2 {
+	font: 90px BebasNeue;
+	margin-top: 20px;
+	padding-left: 30px;
+	letter-spacing: 5px;
+	
+}
+
+.typeUp p {
+	font: 65px BebasNeue;
+	letter-spacing: 5px;
+	margin-top: -165px;
+	margin-left: 225px;
+}
 
 .select {
 	background-color: rgba(255,255,255,0.2);
@@ -46,7 +89,6 @@ body {
 	margin-right: auto;
 	margin-left:  auto;
 	text-align: center;
-	cursor: pointer;
 	
 	font: 75px BebasNeue;
 	color: #ddddde;
@@ -56,12 +98,11 @@ body {
 .select-active {
 
 	background-color: rgba(255,255,255,0.2);
-	margin: 6px;
+	margin: 18px;
 	width:  90%;
 	margin-right: auto;
 	margin-left:  auto;
 	text-align: center;
-	cursor: pointer;
 	
 	font: 75px BebasNeue;
 	color: #63c7c9;
@@ -73,13 +114,15 @@ iframe {
 	display:  none;
 }
 
+/*----recipe list-----*/
 
 h1 {
 	font-family: "BebasNeue";
 }
 
+#recipes {
 
-
+}
 
 ul.recipe {
 
@@ -104,6 +147,7 @@ ul.recipe h1 {
 	font: 90px BebasNeue;
 
 }
+
 .recipe li {
 
 	display: none;
@@ -124,27 +168,75 @@ ul.recipefull {
 	width:  90%;
 	margin-right: auto;
 	margin-left:  auto;
+	padding-bottom: 15px;
 	text-align: center;
 	cursor: pointer;
 
 	list-style: none;
 	
-	font: 75px BebasNeue;
+	font: 60px 'A-Rounded', sans-serif;
+	text-transform: uppercase;
+	font-variant:small-caps;
 	color: #ddddde;
 		
 }
 
 ul.recipefull h1 {
+
 	font: 90px BebasNeue;
 
 }
 
+ul.recipefull li {
+	margin: 50px;
+	text-align: left;
+	
+}
+
+ul.recipefull .seeurl {
+
+	width: 33%;
+	height: 100px;
+	margin-left: 45px;
+	
+	background-color: rgba(99,200,202,0.5);
+	border: 3px outset #dddddf;
+
+	font: 75px BebasNeue;
+	color:  #dddddf;
+	padding-top: 20px;
+	
+	text-align: center;
+}
+
+ul.recipefull .seeurl a{
+	text-decoration: none;
+	
+	font: 75px BebasNeue;
+	color:  #dddddf;
+
+
+}
 ul.recipefull .submit {
-	color: #63c7c9;
+
+	width: 33%;
+	height: 100px;
+	margin-top: -125px;
+	margin-right: 80px;
+	float: right;
+	
+	background-color: rgba(99,200,202,0.5);
+	border: 3px outset #dddddf;
+
+	font: 75px BebasNeue;
+	color:  #dddddf;
+	padding-top: 20px;
+
+	text-align: center;
+
 	display: none;
 }
 
 ul.recipefull .shop {
 	color: #63c7c9;
-
 }

@@ -1,4 +1,4 @@
-var email = '';
+/* var email = ''; */
 
 var chooser = {
 	gfCheck: '',
@@ -10,7 +10,17 @@ var chooser = {
 	listen: function(){
 		
 		$('div.type').click(function(e){
-			$('div#type').slideToggle();
+			$('div.type').unbind('click');
+			$('div#type').slideUp();
+			$('div.type').removeClass('type').addClass('typeUp');
+			chooser.listen();
+		});
+		
+		$('div.typeUp').click(function(e){
+			$('div.typeUp').unbind('click');
+			$('div#type').slideDown();
+			$('div.typeUp').removeClass('typeUp').addClass('type');
+			chooser.listen();
 		});
 		
 		$('div.select').click(function(e){
@@ -175,7 +185,8 @@ var view = {
 		$('ul.recipefull h1').click(function(e){
 		
 			$('ul.recipefull').removeClass('recipefull').addClass('recipe');
-			
+			$('div.submit').css('display', 'none');
+
 		});
 	},
 	
@@ -265,26 +276,18 @@ var shop = {
 			
 			$(e).unbind('click');
 			
-			if(email === ''){
-				email = prompt("Where do you want to send your list? ", "enter an email address here");
+				email = prompt("Where should we email your shopping list? ", "");
 				if(shop.check() === false){
-					alert('This isn\'t a valid e-mail address. Click "send" and try again.');  
+					alert('Oops! This isn\'t a valid e-mail address. Click "send" and try again.');  
 				}
-			}else{
-				
-				var check = shop.check();
-				if(check === false){
-					email = prompt("Where do you want to send your list? ", "enter an email address here");
-				}
-			}
+
 			
 			var info = e.target.parentElement;
 			var name = $(info).find('h1')[0].innerText; //.find('name');
 			var ingreds = shop.list;
-			var url = $(info).find('h3');
-			url = $(url)[0];
-			url = $(url).find('a')[0].href;
-			
+			var url = $(info).find('a');
+			url = $(url)[0].href;
+
 
 			var num = ingreds.length;
 			var ingredString = '';

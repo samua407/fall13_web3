@@ -14,7 +14,7 @@
 <body>
 	
 <div id='header'>
-	<div class="type">
+	<div class='type'>
 		<h2>TYPE:</h2> <p></p>
 	</div>
 		
@@ -40,7 +40,6 @@
 		</div>
 	</div>
 </div>
-
 
 
 <div id='recipes'>
