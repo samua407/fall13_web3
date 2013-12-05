@@ -10,24 +10,29 @@ var chooser = {
 	listen: function(){
 		
 		$('div.type').click(function(e){
-			$('div.type').unbind('click');
-			$('div#type').slideUp();
-			$('div.type').removeClass('type').addClass('typeUp');
-			chooser.listen();
+			$('div#type').slideToggle();
+			
 		});
-		
-		$('div.typeUp').click(function(e){
-			$('div.typeUp').unbind('click');
-			$('div#type').slideDown();
-			$('div.typeUp').removeClass('typeUp').addClass('type');
-			chooser.listen();
-		});
-		
+
+	},
+	
+	rec_listen: function(){
 		$('div.select').click(function(e){
-			$('div.select').unbind('click');
-						
+			console.log('click!');
+			chooser.type(e);		
+		});
+	
+	},
+	
+	type: function(e){
+
+			console.log('type');
+			
+			$(e.target).unbind('click');
+
 			var div = $(e.target);
 			div.removeClass('select').addClass('select-active');
+			div.click(function(){chooser.untype(e)});
 			
 			$('ul.recipe').css('display', 'none');
 		    
@@ -69,14 +74,18 @@ var chooser = {
 			   	break;
 			   
 		    }
-		    
-		});
+	},
+	
+	untype: function(e){
 
-		$('div.select-active').click(function(e){
-		
+			console.log('type2');
+
+			$(e.target).unbind('click');
+
 			var div = $(e.target);
 			div.removeClass('select-active').addClass('select');
-			
+			div.click(function(){chooser.type(e)});
+
 			$('ul.recipe').css('display', 'none');
 
 			switch(e.target){
@@ -116,10 +125,12 @@ var chooser = {
 			   	break;
 		    }
 
-	
-		});	
+		//	chooser.listen();
+		//});	
 		
 	},
+	
+	
 	activate: function(){
 		
 		//console.log('activating!');
@@ -157,12 +168,13 @@ var chooser = {
 			$('#reciples').css('display', 'block');
 		}
 		
-	    chooser.listen();
-	    view.listen();
+	   // chooser.listen();
+	   // view.listen();
 	}
 	
 
 };
+
 
 
 var view = {
@@ -170,12 +182,12 @@ var view = {
 	listen: function(){
 
 		$('ul.recipe h1').click(function(e){
-			$('ul.recipe h1').unbind('click');
+			//$('ul.recipe h1').unbind('click');
 			$('ul.recipefull').removeClass('recipefull').addClass('recipe');
 			$(e.target.parentElement).removeClass('recipe').addClass('recipefull');
-			view.listen();
-			view.listen_shrink();
-			shop.listen();
+			//view.listen();
+			//view.listen_shrink();
+			//shop.listen();
 		});
 		
 	},
@@ -209,7 +221,7 @@ var shop = {
 	listen: function(){
 				
 		$('ul.recipefull li').click(function(e){
-			$('ul.recipefull li').unbind('click');
+			//$('ul.recipefull li').unbind('click');
 			$(e.target).addClass('shop');
 			
 			var submit = e.target.parentElement;//.childNodes;
@@ -220,7 +232,7 @@ var shop = {
 			var val = $(e.target)[0].textContent;
 			shop.list.push(val);
 			
-			shop.listen_cancel();
+			//shop.listen_cancel();
 						
 			shop.button(e);
 			
@@ -229,7 +241,7 @@ var shop = {
 
 	listen_cancel: function(){
 		
-		shop.listen();
+		//shop.listen();
 
 		$('li.shop').click(function(e){
 		
@@ -274,7 +286,7 @@ var shop = {
 			
 	send: function(e){
 			
-			$(e).unbind('click');
+			//$(e).unbind('click');
 			
 				email = prompt("Where should we email your shopping list? ", "");
 				if(shop.check() === false){
@@ -315,10 +327,25 @@ var shop = {
 };
 
 
-  
-$( document ).ready(function() {
+function listeners(){
 
-	chooser.listen();	
+	chooser.listen();
+	chooser.rec_listen();
+//	view.listen();
+//	view.listen_shrink();
+//	shop.listen();
+//	shop.listen_cancel();
+	
+};
   
+
+ 
+
+ 
+ 
+$(function() {
+
+
+	listeners();  
   
 });
