@@ -11,7 +11,7 @@ var db = {
 	//get recipes
 	get: function(){
 
-		var sql_statement = "q=SELECT * FROM recipes";
+		var sql_statement = "q=SELECT * FROM recipes ORDER BY recipename";
 	    var url_query = this.url_cartoData + this.notes_format + sql_statement;
 		
 		
@@ -19,7 +19,7 @@ var db = {
 				    	   
 			rec = data.rows;
 			get.list(rec);
-			
+						
 			for(i = 0; i<rec.length; i++){
 				var recipename = rec[i].recipename;
 				var main = rec[i].mainingreds;
