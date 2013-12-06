@@ -11,23 +11,20 @@ var chooser = {
 		
 		$('div.type').click(function(e){
 			$('div#type').slideToggle();
-			
 		});
-
-	},
-	
-	rec_listen: function(){
+		
+		$('img#hide_type').click(function(e){
+			$('div#type').slideToggle();
+		});
+		
 		$('div.select').click(function(e){
-			console.log('click!');
 			chooser.type(e);		
 		});
-	
+
 	},
 	
 	type: function(e){
 
-			console.log('type');
-			
 			$(e.target).unbind('click');
 
 			var div = $(e.target);
@@ -35,6 +32,7 @@ var chooser = {
 			div.click(function(){chooser.untype(e)});
 			
 			$('ul.recipe').css('display', 'none');
+			view.listen();
 		    
 		    switch(e.target){
 			   case gf:
@@ -78,7 +76,6 @@ var chooser = {
 	
 	untype: function(e){
 
-			console.log('type2');
 
 			$(e.target).unbind('click');
 
@@ -130,10 +127,8 @@ var chooser = {
 		
 	},
 	
-	
 	activate: function(){
 		
-		//console.log('activating!');
 		
 		$('div.type p ').empty();
 
@@ -180,37 +175,29 @@ var chooser = {
 var view = {
 	
 	listen: function(){
-
-		$('ul.recipe h1').click(function(e){
-			//$('ul.recipe h1').unbind('click');
+		$('.recipe h1').click(function(e){view.expand(e);});		
+	},
+	
+	expand: function(e){
 			$('ul.recipefull').removeClass('recipefull').addClass('recipe');
+			$(e.target).unbind('click');
+			shop.list = [];
 			$(e.target.parentElement).removeClass('recipe').addClass('recipefull');
-			//view.listen();
-			//view.listen_shrink();
-			//shop.listen();
-		});
-		
-	},
-	
-	listen_shrink: function(){
-		
-		$('ul.recipefull h1').click(function(e){
-		
-			$('ul.recipefull').removeClass('recipefull').addClass('recipe');
-			$('div.submit').css('display', 'none');
+			$(e.target).click(function(e){view.shrink(e);});
+			shop.listen();
 
-		});
 	},
 	
-	toggle_open: function(){
-		$('div#select-toggle').click(function(e){
+	shrink: function(e){
 		
-			$('div#select-toggle').css('display', 'none');
-			
-		});
-	}
-	
-	
+		$(e.target).unbind('click');
+		console.log('shrink');
+		$('ul.recipefull').removeClass('recipefull').addClass('recipe');
+		$(e.target).click(function(e){view.expand(e);});
+		$('div.submit').css('display', 'none');
+
+	},
+
 };
 
 
@@ -219,60 +206,54 @@ var shop = {
 	list: new Array(),
 	
 	listen: function(){
-				
+
+		$('.submit').unbind('click');
+		$('.submit').click(function(e){shop.send(e);})
+
 		$('ul.recipefull li').click(function(e){
-			//$('ul.recipefull li').unbind('click');
-			$(e.target).addClass('shop');
-			
-			var submit = e.target.parentElement;//.childNodes;
-			submit = $(submit).find('.submit')[0];
-			$(submit).fadeIn();
-
-			
-			var val = $(e.target)[0].textContent;
-			shop.list.push(val);
-			
-			//shop.listen_cancel();
-						
-			shop.button(e);
-			
+			shop.list_add(e);
 		});
 	},
 
-	listen_cancel: function(){
-		
-		//shop.listen();
-
-		$('li.shop').click(function(e){
-		
-			$(e.target).removeClass('shop');
+	toggleSend: function(e){		
+			var submit = e.target.parentElement;
+			submit = $(submit).find('.submit')[0];
+			$(submit).fadeIn();	
 			
-			var val = $(e.target)[0].textContent;   
-			 
-			shop.list = $.grep(shop.list, function(value) {
-			  return value != val;
+			if(shop.list.length === 0 ){
+				var submit = e.target.parentElement;
+				submit = $(submit).find('.submit')[0];
+				$(submit).fadeOut();
+			};		
 
-			});
-			
-			shop.button(e);
+	},
 
-		});
+	list_add: function(e){
 		
+		$(e.target).unbind('click');
+		$(e.target).addClass('shop');
+
+		var val = $(e.target)[0].textContent;
+		shop.list.push(val);
+		
+		shop.toggleSend(e);
+		$(e.target).click(function(e){shop.list_rem(e);})
+	
 	},
 	
-	button: function(e){
-	
-	
-		$( 'div.submit' ).click(function(e){
-			e.preventDefault();
-			shop.send(e);
+	list_rem: function(e){
+					
+		$(e.target).unbind('click');
+		$(e.target).removeClass('shop');
+		
+		var val = $(e.target)[0].textContent;   
+		shop.list = $.grep(shop.list, function(value) {
+		  return value != val;
 		});
 		
-		if(shop.list.length === 0 ){
-			var submit = e.target.parentElement;//.childNodes;
-			submit = $(submit).find('.submit')[0];
-			$(submit).fadeOut();
-		}
+		shop.toggleSend(e);
+		$(e.target).click(function(e){shop.list_add(e);})
+
 		
 	},
 	
@@ -286,14 +267,13 @@ var shop = {
 			
 	send: function(e){
 			
-			//$(e).unbind('click');
+			console.log('send');
 			
-				email = prompt("Where should we email your shopping list? ", "");
-				if(shop.check() === false){
-					alert('Oops! This isn\'t a valid e-mail address. Click "send" and try again.');  
-				}
+			email = prompt("Where should we email your shopping list? ", "");
+			if(shop.check() === false){
+				alert('Oops! This isn\'t a valid e-mail address. Click "send" and try again.');  
+			}
 
-			
 			var info = e.target.parentElement;
 			var name = $(info).find('h1')[0].innerText; //.find('name');
 			var ingreds = shop.list;
@@ -310,42 +290,16 @@ var shop = {
 			
 			}
 			
-			
 			var link = 'lib/mail.php?email='+email+'&ingreds='+ingredString+'&name='+name+'&url='+url;
 		
-		   	console.log(link);
 		   	window.open(link,"loader");
-		   	alert('sent!');
-		   	
-		   	
-			
-		  	 
-		
+		  	alert('sent!');
+		   		
 	},
 	
 
 };
-
-
-function listeners(){
-
-	chooser.listen();
-	chooser.rec_listen();
-//	view.listen();
-//	view.listen_shrink();
-//	shop.listen();
-//	shop.listen_cancel();
-	
-};
-  
-
- 
-
  
  
-$(function() {
-
-
-	listeners();  
-  
-});
+ 
+$(function(){chooser.listen();});

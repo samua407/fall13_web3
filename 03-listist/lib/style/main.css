@@ -21,6 +21,14 @@ body {
 	width:  100%;
 }
 
+#type img {
+	width: 10%;
+	opacity: 0.5;
+	margin-right: 45%;
+	margin-left: 45%;
+	
+	
+}
 .type {
    background: url("img/background.png") 0 0 no-repeat fixed;
    height: 135px;

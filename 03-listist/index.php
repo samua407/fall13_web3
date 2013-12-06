@@ -15,7 +15,7 @@
 	
 <div id='header'>
 	<div class='type'>
-		<h2>TYPE:</h2> <p></p>
+		<h2>TYPE:</h2> <p></p> 
 	</div>
 		
 	<div id='type'>
@@ -38,6 +38,7 @@
 		<div class="select" id="all">
 		All
 		</div>
+		<img id='hide_type' src="lib/style/img/up.png">
 	</div>
 </div>
 
