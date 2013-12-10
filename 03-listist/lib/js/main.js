@@ -270,31 +270,33 @@ var shop = {
 			console.log('send');
 			
 			email = prompt("Where should we email your shopping list? ", "");
+			
 			if(shop.check() === false){
 				alert('Oops! This isn\'t a valid e-mail address. Click "send" and try again.');  
-			}
-
-			var info = e.target.parentElement;
-			var name = $(info).find('h1')[0].innerText; //.find('name');
-			var ingreds = shop.list;
-			var url = $(info).find('a');
-			url = $(url)[0].href;
-
-
-			var num = ingreds.length;
-			var ingredString = '';
-
-			for(i = 0; i<num; i++){
+			}else{
 			
-				ingredString = ingredString + ingreds[i]+ '<br>' ;
-			
-			}
-			
-			var link = 'lib/mail.php?email='+email+'&ingreds='+ingredString+'&name='+name+'&url='+url;
 		
-		   	window.open(link,"loader");
-		  	alert('sent!');
-		   		
+				var info = e.target.parentElement;
+				var name = $(info).find('h1')[0].innerText; //.find('name');
+				var ingreds = shop.list;
+				var url = $(info).find('a');
+				url = $(url)[0].href;
+	
+	
+				var num = ingreds.length;
+				var ingredString = '';
+	
+				for(i = 0; i<num; i++){
+				
+					ingredString = ingredString + ingreds[i]+ '<br>' ;
+				
+				}
+				
+				var link = 'lib/mail.php?email='+email+'&ingreds='+ingredString+'&name='+name+'&url='+url;
+			
+			   	window.open(link,"loader");
+			  	alert('sent!');
+		   	};
 	},
 	
 
